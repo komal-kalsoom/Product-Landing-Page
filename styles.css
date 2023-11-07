@@ -1,0 +1,271 @@
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600;800&family=Poppins:wght@400;500;600;700&display=swap");
+
+:root {
+  --primary-color: #ed3849;
+  --primary-color-dark: #d23141;
+  --text-dark: #0f172a;
+  --text-light: #64748b;
+  --extra-light: #f8fafc;
+  --white: #ffffff;
+  --max-width-1400: 1400px;
+  --max-width-1200: 1200px;
+  --max-width-900: 900px;
+  --header-font: "Playfair Display", serif;
+}
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.sectionContainer {
+  max-width: var(--max-width-1400);
+  margin: auto;
+  padding: 5rem 1rem;
+}
+
+.btn {
+  padding: 0.75rem 1.5rem;
+  outline: none;
+  border: none;
+  font-size: 1rem;
+  color: var(--white);
+  background-color: var(--primary-color);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.btn:hover {
+  background-color: var(--primary-color-dark);
+}
+
+img {
+  width: 100%;
+  display: flex;
+}
+
+a {
+  text-decoration: none;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+}
+
+nav {
+  max-width: var(--max-width-1200);
+  margin: auto;
+  padding: 2rem 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.navLinks {
+  flex: 1;
+  list-style: none;
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+}
+
+.link a {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.link a:hover {
+  color: var(--primary-color);
+}
+
+.navLogo a {
+  font-size: 2rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.navLogo a span {
+  color: var(--primary-color);
+}
+
+.navIcons {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 2rem;
+}
+
+.navIcons span a {
+  font-size: 1.25rem;
+  color: var(--text-dark);
+}
+
+.navIcons span a:hover {
+  color: var(--primary-color);
+}
+
+.headerContainer {
+  min-height: 650px;
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 2rem;
+  align-items: center;
+}
+
+.headerContent {
+  max-width: 600px;
+  margin-left: auto;
+}
+
+.headerContent h4 {
+  font-size: 1rem;
+  font-weight: 500;
+  color: var(--primary-color);
+}
+
+.headerContent h1 {
+  font-size: 5rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.headerContent p {
+  color: var(--text-light);
+}
+
+.headerImage {
+  position: relative;
+  height: 100%;
+}
+
+.headerImage img {
+  position: absolute;
+  left: 50%;
+  bottom: -5rem;
+  transform: translateX(-50%);
+  max-width: 500px;
+}
+
+.product {
+  max-width: var(--max-width-900);
+  margin: 4rem auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.productCardContent {
+  text-align: center;
+  padding: 1rem;
+}
+
+.productRating {
+  margin-bottom: 5px;
+  font-size: 0.8rem;
+  color: goldenrod;
+}
+
+.productCardContent h4 {
+  margin-bottom: 5px;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+}
+
+.productCardContent p {
+  font-weight: 500;
+  color: var(--text-dark);
+}
+
+.productCardContent p s {
+  font-size: 0.9rem;
+  font-weight: 400;
+  color: var(--text-light);
+}
+
+.footerContainer {
+  max-width: var(--max-width-1200);
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 2rem;
+}
+
+.footerContainer h4 {
+  margin-bottom: 1.5rem;
+  font-size: 1.2rem;
+  font-weight: 800;
+  font-family: var(--header-font);
+  color: var(--text-dark);
+}
+
+.footerCol p {
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.footerCol p span {
+  margin-right: 0.5rem;
+  font-size: 1.2rem;
+  color: var(--primary-color);
+}
+
+.footerCol a {
+  display: block;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  color: var(--text-light);
+}
+
+.footerCol a:hover {
+  color: var(--primary-color);
+}
+
+.footerBar {
+  padding: 1rem;
+  text-align: center;
+  font-size: 0.8rem;
+  color: var(--text-light);
+  border-top: 2px solid var(--extra-light);
+}
+
+@media (width < 900px) {
+  .navLinks {
+    display: none;
+  }
+
+  .headerContainer {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .headerContent {
+    margin: auto;
+    text-align: center;
+  }
+
+  .headerImage {
+    min-height: 650px;
+  }
+
+  .product {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+  }
+
+  .footerContainer {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (width < 600px) {
+  .product {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
